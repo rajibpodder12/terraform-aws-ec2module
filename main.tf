@@ -11,31 +11,31 @@ provider "aws" {
     region = var.region
 }
 
-data "aws_ami" "ami_id" {
-    owners = ["amazon"]
-    most_recent = true
-    filter {
-      name = "name"
-      values = [ "amz2-ami-hvm-*" ]
-    }
-    filter {
-      name = "virtualization-type"
-      values = ["hvm"]
-    }
-    filter {
-        name = "root-device-type"
-        values = ["ebs"]
-    }
-    filter {
-        name ="architecture"
-        values = ["x86_64"]
-    }
+data "aws_ami" "amzn2" {
+  most_recent = true
+  owners = ["amazon"]
+  filter {
+    name = "root-device-type"
+    values = ["ebs"]
+  }
+  filter {
+    name = "virtualization-type"
+    values = [ "hvm" ]
+  }
+  filter {
+    name = "architecture"
+    values = ["x86_64"]
+  }
+   filter {
+   name   = "name"
+   values = ["amzn2-ami-hvm*"]
+ }
 }
 
 resource "aws_instance" "ec2" {
-    ami = data.aws_ami.ami_id.id
+    ami = data.aws_ami.amzn2.id
     instance_type = var.instance_type
-    user_data = file("./userdata.sh")
+    user_data = file("${path.module}/userdata.sh")
     tags = {
         "Name" = "ec2"
         "ManagedBy" = "terraform"
