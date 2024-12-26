@@ -4,8 +4,10 @@
 ## Usage
 
 ```
-module "ec2" {
-    source = "rajibpodder12/terraform-aws-ec2module/modules"
+module "ec2module" {
+  source  = "rajibpodder12/ec2module/aws"
+  version = "1.0.0"
+  # insert the 2 required variables here
 }
 
 ```
