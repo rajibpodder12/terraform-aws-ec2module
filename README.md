@@ -17,4 +17,4 @@ module "ec2module" {
 | Name | Version |
 |------|---------|
 | <a name="provider_aws" href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs"></a> [aws](#provider\_aws) | 5.82.2 |
-| <a name="provider_http href="https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http"></a> [http](#provider\_http)| 3.4.5 |
+| <a name="provider_http" href="https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http"></a> [http](#provider\_http)| 3.4.5 |
