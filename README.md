@@ -6,7 +6,7 @@
 ```
 module "ec2module" {
   source  = "rajibpodder12/ec2module/aws"
-  version = "2.0.0"
+  version = "4.0.0"
   # insert the 2 required variables here
 }
 
@@ -16,5 +16,5 @@ module "ec2module" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.46.0 |
-| <a name="provider_template"></a> [template](#provider\_template) | 2.2.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.82.2 |
+| <a name="provider_http "></a> [http](#provider\_http)| 3.4.5 |
