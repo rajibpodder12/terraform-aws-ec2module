@@ -4,6 +4,7 @@ variable "region" {
 }
 variable "instance_type" {
   type        = string
+  default     = "t2.micro"
   description = "instance type should be t2.micro, otherwise it will error out"
   validation {
     condition     = var.instance_type == "t2.micro"
