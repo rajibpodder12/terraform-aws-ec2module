@@ -7,7 +7,9 @@
 module "ec2module" {
   source  = "rajibpodder12/ec2module/aws"
   version = "4.0.0"
-  # insert the 2 required variables here
+  # insert the 1 required variables here
+  instance_type = <"t2.micro">
+  region        = <"ap-southeast-2">
 }
 
 ```
